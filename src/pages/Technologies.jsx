@@ -20,6 +20,8 @@ import {
   SiNextdotjs,
   SiCodeigniter,
 } from 'react-icons/si';
+import { MOTION_VARIANTS, DEFAULT_VIEWPORT } from '../../constants';
+import { motion } from 'framer-motion';
 
 const iconMap = {
   HTML: <FaHtml5 className="text-black" />,
@@ -76,24 +78,38 @@ export default function Technologies() {
         Technologies{' '}
       </h2>
       <div className="mx-auto mt-8 grid grid-cols-1 gap-6 rounded-3xl p-10 text-center shadow-2xl sm:grid-cols-2 lg:grid-cols-3">
-        <div className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105 hover:shadow-xl">
+        <motion.div
+          variants={MOTION_VARIANTS.slideLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={DEFAULT_VIEWPORT}
+          transition={{ duration: 0.5 }}
+          className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105 hover:shadow-xl"
+        >
           <h1 className="mb-5 text-lg font-semibold lg:text-2xl">Frontend</h1>
           <div className="grid grid-cols-1 gap-1 font-mono sm:grid-cols-2">
             {frontendSkills.map(renderSkill)}
           </div>
-        </div>
+        </motion.div>
         <div className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105 hover:shadow-xl">
           <h1 className="mb-5 text-lg font-semibold lg:text-2xl">Backend</h1>
           <div className="grid grid-cols-1 gap-1 font-mono sm:grid-cols-2">
             {backendSkills.map(renderSkill)}
           </div>
         </div>
-        <div className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105 hover:shadow-xl sm:col-span-2 lg:col-span-1">
+        <motion.div
+          variants={MOTION_VARIANTS.slideRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={DEFAULT_VIEWPORT}
+          transition={{ duration: 0.5 }}
+          className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105 hover:shadow-xl sm:col-span-2 lg:col-span-1"
+        >
           <h1 className="mb-5 text-lg font-semibold lg:text-2xl">Others</h1>
           <div className="grid grid-cols-1 gap-1 font-mono sm:grid-cols-2">
             {otherSkills.map(renderSkill)}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

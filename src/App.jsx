@@ -25,6 +25,10 @@ function App() {
       </div>
 
       <div className="mx-auto mb-5 max-w-sm rounded-3xl sm:max-w-2xl lg:mb-8 lg:max-w-7xl">
+        <About />
+      </div>
+
+      <div className="mx-auto mb-5 max-w-sm rounded-3xl sm:max-w-2xl lg:mb-8 lg:max-w-7xl">
         <Experience />
       </div>
 
