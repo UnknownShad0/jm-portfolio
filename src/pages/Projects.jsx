@@ -1,100 +1,77 @@
-import {
-  FaReact,
-  FaPhp,
-  FaLaravel,
-  FaBootstrap,
-  FaHtml5,
-  FaCss3Alt,
-  FaTerminal,
-  FaFigma,
-  FaDocker,
-} from 'react-icons/fa';
-import {
-  SiJavascript,
-  SiTailwindcss,
-  SiMysql,
-  SiGit,
-  SiPostman,
-  SiVite,
-  SiJson,
-  SiNextdotjs,
-  SiCodeigniter,
-} from 'react-icons/si';
+import { useState } from 'react';
+import { FaGraduationCap, FaBriefcase, FaLaptopCode } from 'react-icons/fa';
 
-const iconMap = {
-  HTML: <FaHtml5 className="text-black" />,
-  Docker: <FaDocker className="text-black" />,
-  CSS: <FaCss3Alt className="text-black" />,
-  React: <FaReact className="text-black" />,
-  JavaScript: <SiJavascript className="text-black" />,
-  'Tailwind CSS': <SiTailwindcss className="text-black" />,
-  Bootstrap: <FaBootstrap className="text-black" />,
-  Laravel: <FaLaravel className="text-black" />,
-  PHP: <FaPhp className="text-black" />,
-  SQL: <SiMysql className="text-black" />,
-  Git: <SiGit className="text-black" />,
-  'REST API': <SiJson className="text-black" />, // JSON icon as placeholder
-  Postman: <SiPostman className="text-black" />,
-  Vite: <SiVite className="text-black" />,
-  'Terminal/SSH': <FaTerminal className="text-black" />,
-  Figma: <FaFigma className="text-black" />,
-  'Next.js': <SiNextdotjs className="text-black" />,
-  CodeIgniter: <SiCodeigniter className="text-black" />,
-  'FortiClient VPN': <FaTerminal className="text-black" />, // Placeholder
-  SSH: <FaTerminal className="text-black" />, // Placeholder for deployment via terminal
-};
+function Projects() {
+  const [activeTab, setActiveTab] = useState(null);
 
-export default function Projects() {
-  const frontendSkills = [
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'React',
-    'Next.js',
-    'Tailwind CSS',
-    'Bootstrap',
-    'Figma',
+  const toggleTab = (tab) => {
+    setActiveTab(activeTab === tab ? null : tab);
+  };
+
+  const tabs = [
+    { label: 'Academic', icon: <FaGraduationCap size={30} /> },
+    { label: 'Work', icon: <FaBriefcase size={30} /> },
+    { label: 'Personal', icon: <FaLaptopCode size={30} /> },
   ];
-
-  const backendSkills = ['Laravel', 'PHP', 'CodeIgniter', 'SQL', 'REST API'];
-
-  const otherSkills = ['Git', 'Postman', 'Vite', 'Terminal/SSH', 'Docker'];
-
-  const renderSkill = (skill) => (
-    <div
-      key={skill}
-      className="flex items-center justify-center gap-2 rounded-xl bg-white p-4 text-center text-3xl font-medium"
-    >
-      {iconMap[skill]}
-      <span className="text-xs text-black">{skill}</span>
-    </div>
-  );
 
   return (
     <section id="skills" className="p-4">
       <h2 className="font-play text-center text-3xl font-bold opacity-25 sm:text-5xl lg:text-8xl">
-        Projects{' '}
+        Projects
       </h2>
-      <div className="mx-auto mt-8 grid grid-cols-1 gap-6 rounded-3xl p-10 text-center shadow-2xl sm:grid-cols-2 lg:grid-cols-3">
-        <div className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105">
-          <h1 className="mb-5 text-lg font-semibold lg:text-2xl">Frontend</h1>
-          <div className="grid grid-cols-1 gap-1 font-mono sm:grid-cols-2">
-            {frontendSkills.map(renderSkill)}
-          </div>
-        </div>
-        <div className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105">
-          <h1 className="mb-5 text-lg font-semibold lg:text-2xl">Backend</h1>
-          <div className="grid grid-cols-1 gap-1 font-mono sm:grid-cols-2">
-            {backendSkills.map(renderSkill)}
-          </div>
-        </div>
-        <div className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105">
-          <h1 className="mb-5 text-lg font-semibold lg:text-2xl">Others</h1>
-          <div className="grid grid-cols-1 gap-1 font-mono sm:grid-cols-2">
-            {otherSkills.map(renderSkill)}
-          </div>
+
+      <div className="mx-auto mt-8 grid grid-cols-3 gap-6 rounded-3xl p-10 pb-5 text-center shadow-2xl">
+        {tabs.map((tab) => (
+          <button
+            key={tab.label}
+            onClick={() => toggleTab(tab.label)}
+            className={`flex flex-col items-center justify-center rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105 focus:outline-none ${
+              activeTab === tab.label ? 'ring-primary/50 bg-gray-100 ring-2' : 'bg-white'
+            }`}
+          >
+            {tab.icon}
+            {/* <h1 className="mt-3 text-xs font-semibold lg:text-base">{tab.label}</h1> */}
+          </button>
+        ))}
+
+        <div className="col-span-3">
+          {/* Projects Section */}
+          {activeTab === 'Academic' && (
+            <div className="mx-auto mt-6 mb-10 max-w-4xl rounded-xl bg-white p-6 shadow-md">
+              <h3 className="mb-4 text-xl font-bold">Academic Projects</h3>
+              <ul className="list-inside list-disc text-left">
+                <li>Voting System – Capstone Project</li>
+                <li>Student Record Manager – OOP Course</li>
+                <li>Library Management System</li>
+              </ul>
+            </div>
+          )}
+
+          {activeTab === 'Work' && (
+            <div className="mx-auto mt-6 mb-10 max-w-4xl rounded-xl bg-white p-6 shadow-md">
+              <h3 className="mb-4 text-xl font-bold">Work Projects</h3>
+              <ul className="list-inside list-disc text-left">
+                <li>Voter Demographics Heatmap – Makopa Inc.</li>
+                <li>Checklist Summary API – Makopa Inc.</li>
+                <li>Inventory Dashboard – Internship Work</li>
+              </ul>
+            </div>
+          )}
+
+          {activeTab === 'Personal' && (
+            <div className="mx-auto mt-6 mb-10 max-w-4xl rounded-xl bg-white p-6 shadow-md">
+              <h3 className="mb-4 text-xl font-bold">Personal Projects</h3>
+              <ul className="list-inside list-disc text-left">
+                <li>React Todo CRUD App</li>
+                <li>Expense Tracker with Laravel & Vue</li>
+                <li>Weather Forecast App (OpenWeatherMap API)</li>
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </section>
   );
 }
+
+export default Projects;

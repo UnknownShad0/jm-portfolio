@@ -91,12 +91,19 @@ export default function Technologies() {
             {frontendSkills.map(renderSkill)}
           </div>
         </motion.div>
-        <div className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105 hover:shadow-xl">
+        <motion.div
+          variants={MOTION_VARIANTS.fade}
+          initial="hidden"
+          whileInView="visible"
+          viewport={DEFAULT_VIEWPORT}
+          transition={{ duration: 1.5 }}
+          className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105 hover:shadow-xl"
+        >
           <h1 className="mb-5 text-lg font-semibold lg:text-2xl">Backend</h1>
           <div className="grid grid-cols-1 gap-1 font-mono sm:grid-cols-2">
             {backendSkills.map(renderSkill)}
           </div>
-        </div>
+        </motion.div>
         <motion.div
           variants={MOTION_VARIANTS.slideRight}
           initial="hidden"

@@ -13,10 +13,11 @@ export default function About() {
       </h2>
       <div className="mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2">
         <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          variants={MOTION_VARIANTS.fade}
+          initial="hidden"
+          whileInView="visible"
+          viewport={DEFAULT_VIEWPORT}
+          transition={{ duration: 1.5 }}
           className="grid grid-cols-1 gap-5 rounded-lg p-5 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl lg:grid-cols-2"
         >
           <div>
@@ -40,7 +41,7 @@ export default function About() {
               </div>
               <div>
                 <label className="text-sm font-semibold">Address:</label>
-                <p>Muzon East, CSJDM, Bulacan.</p>
+                <p>City of San Jose del Monte, Bulacan.</p>
               </div>
               <div className="">
                 <a

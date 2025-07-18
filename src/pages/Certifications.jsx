@@ -76,24 +76,9 @@ export default function Projects() {
         Certifications{' '}
       </h2>
       <div className="mx-auto mt-8 grid grid-cols-1 gap-6 rounded-3xl p-10 text-center shadow-2xl sm:grid-cols-2 lg:grid-cols-3">
-        <div className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105">
-          <h1 className="mb-5 text-lg font-semibold lg:text-2xl">Frontend</h1>
-          <div className="grid grid-cols-1 gap-1 font-mono sm:grid-cols-2">
-            {frontendSkills.map(renderSkill)}
-          </div>
-        </div>
-        <div className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105">
-          <h1 className="mb-5 text-lg font-semibold lg:text-2xl">Backend</h1>
-          <div className="grid grid-cols-1 gap-1 font-mono sm:grid-cols-2">
-            {backendSkills.map(renderSkill)}
-          </div>
-        </div>
-        <div className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105">
-          <h1 className="mb-5 text-lg font-semibold lg:text-2xl">Others</h1>
-          <div className="grid grid-cols-1 gap-1 font-mono sm:grid-cols-2">
-            {otherSkills.map(renderSkill)}
-          </div>
-        </div>
+        <div className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105"></div>
+        <div className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105"></div>
+        <div className="rounded-3xl p-5 shadow transition-all duration-300 hover:scale-105"></div>
       </div>
     </section>
   );
