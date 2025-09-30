@@ -42,22 +42,29 @@ export default function Experience() {
       year: 'Oct 2024 - Present',
       title: 'Web Developer',
       institution: 'Clearmind Algorithmics Inc.',
-      description:
-        'Lead full-stack development projects, mentor junior developers, and architect scalable solutions',
+      description: [
+        'Contributed to multiple projects, handling both front-end and back-end development using React.js with Tailwind CSS for responsive web and mobile interface, and CodeIgniter for API integrations to support the mobile development team.',
+        'Created documentation and user manuals for completed projects, ensuring clarity and usability for end-users and team members.',
+        'Gained hands-on experience with Git, Docker, and development servers, strengthening problem-solving skills and adaptability in a collaborative development environment.',
+      ],
     },
     {
       year: 'May 2025',
       title: 'DESO Technical Support Staff',
       institution: 'Commission on Elections',
-      description:
-        'Developed responsive web applications using React, improved user experience by 40%',
+      description: [
+        'Provided technical assistance during elections, including troubleshooting voting machines and coordinating with EBs to ensure smooth voting operations.',
+        'Documented incidents and maintained accurate records of machine performance and issues for reporting and future reference.',
+      ],
     },
     {
       year: 'Apr - Jul 2024',
       title: 'Software Developer Intern',
       institution: 'Makopa Inc. Philippines',
-      description:
-        'Developed responsive web applications using React, improved user experience by 40%',
+      description: [
+        'Independently completed a full project from start to finish, ensuring all requirements assigned by the supervisor were delivered on time.',
+        'Gained hands-on experience with HTML, CSS, Bootstrap, JavaScript, jQuery, PHP, Laravel, and MySQL, applying these technologies to develop and maintain web applications.',
+      ],
     },
   ];
 
@@ -133,7 +140,14 @@ export default function Experience() {
               {careerData.map((item, index) => (
                 <TimelineItem
                   key={index}
-                  item={item}
+                  item={{
+                    ...item,
+                    description: item.description.map((desc, i) => (
+                      <li key={i} className="ml-[7%] lg:ml-[3%]">
+                        {desc}
+                      </li>
+                    )),
+                  }}
                   isLast={index === careerData.length - 1}
                   variant={itemVariant}
                 />
