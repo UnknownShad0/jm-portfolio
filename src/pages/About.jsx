@@ -45,7 +45,7 @@ export default function About() {
               </div>
               <div className="">
                 <a
-                  href="/jm-portfolio/anunciado_resume.pdf"
+                  href="/anunciado_resume.pdf"
                   download="anunciado_resume.pdf"
                   className="flex items-center gap-2 text-sm font-semibold"
                 >
