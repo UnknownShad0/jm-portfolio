@@ -86,14 +86,14 @@ function Projects() {
         Projects
       </h2>
 
-      <div className="mx-auto mt-8 max-w-6xl">
+      <div className="mx-auto mt-8 gap-6 rounded-3xl p-10 text-center shadow-2xl">
         {/* Projects Grid */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {projects.map((project) => (
             <div
               key={project.id}
               onClick={() => openGallery(project)}
-              className="group relative transform cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              className="group relative transform cursor-pointer overflow-hidden rounded-xl shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               <img
                 src={project.thumbnail}
