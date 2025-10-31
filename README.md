@@ -13,3 +13,15 @@ If you are developing a production application, we recommend using TypeScript wi
 
 npm run build
 npm run deploy
+
+## TODOs
+
+-> darkmode
+-> certificates
+-> mobile view responsiveness
+-> +projects
+-> project details
+-> nav links
+->
+
+-> branch web-navs test
