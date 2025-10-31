@@ -13,5 +13,3 @@ If you are developing a production application, we recommend using TypeScript wi
 
 npm run build
 npm run deploy
-
--> web-darkmode branch test!
