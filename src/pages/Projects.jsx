@@ -54,7 +54,8 @@ function Projects() {
         '/jm-portfolio/vms/8info.jpg',
         '/jm-portfolio/vms/9ballot.jpg',
       ],
-      description: 'Full-stack e-commerce application with payment integration.',
+      description:
+        'A secure system that manages voter registration, candidate information, vote submission, and automated result counting for efficient and transparent elections.',
     },
   ];
 
