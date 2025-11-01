@@ -94,7 +94,7 @@ export default function Experience() {
   );
 
   return (
-    <section id="skills" className="p-4">
+    <section id="career" className="p-4">
       <h2 className="font-play mb-12 text-center text-3xl font-bold opacity-25 sm:text-5xl lg:text-8xl">
         Education and Career
       </h2>
