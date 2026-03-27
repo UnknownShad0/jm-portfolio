@@ -1,5 +1,6 @@
 import './App.css';
 import { Header, Footer } from './components';
+import DarkModeToggle from './components/DarkModeToggle';
 import { Hero, About, Technologies, Projects, Experience, Contact, Certifications } from './pages';
 import coverImage from './assets/cover.jpg';
 
@@ -17,7 +18,6 @@ function App() {
             <div className="flex flex-2 items-center justify-center">
               <div className="">
                 <Hero />
-                {/* <About /> */}
               </div>
             </div>
           </div>
@@ -43,10 +43,6 @@ function App() {
       <div className="mx-auto mb-5 max-w-sm rounded-2xl sm:max-w-2xl lg:mb-8 lg:max-w-7xl">
         <Certifications />
       </div>
-
-      {/* <div className="mx-auto mb-10 max-w-sm rounded-2xl sm:max-w-2xl lg:mb-16 lg:max-w-7xl">
-        <Contact />
-      </div> */}
 
       <Footer />
     </>

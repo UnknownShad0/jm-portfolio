@@ -4,9 +4,10 @@ export default function Certifications() {
   const [selectedCert, setSelectedCert] = useState(null);
 
   const certifications = [
-    { id: 1, image: '/jm-portfolio/certs/basic-of-database.png' },
-    { id: 2, image: '/jm-portfolio/certs/learn-php.png' },
-    { id: 3, image: '/jm-portfolio/certs/mastering-html.png' },
+    { id: 1, image: '/certs/basic-of-database.png' },
+    { id: 2, image: '/certs/learn-php.png' },
+    { id: 3, image: '/certs/mastering-html.png' },
+    { id: 3, image: '/certs/laravel-course.jpg' },
   ];
 
   const openModal = (cert) => {
@@ -24,14 +25,14 @@ export default function Certifications() {
       </h2>
 
       {/* Certifications Grid */}
-      <div className="mx-auto mt-8 grid grid-cols-1 gap-6 rounded-3xl p-10 text-center shadow-2xl sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto mt-8 grid grid-cols-1 gap-6 rounded-3xl p-10 text-center shadow-2xl sm:grid-cols-2">
         {certifications.map((cert) => (
-          <div key={cert.id} className="flex flex-col items-center">
+          <div key={cert.id} className="mx-auto flex max-w-lg flex-col items-center">
             <img
               src={cert.image}
               alt={`Certification ${cert.id}`}
-              width={300}
-              height={200}
+              // width={300}
+              height={100}
               className="cursor-pointer rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
               onClick={() => openModal(cert)}
             />

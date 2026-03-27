@@ -45,11 +45,11 @@ export default function About() {
               </div>
               <div className="">
                 <a
-                  href="/jm-portfolio/anunciado_resume.pdf"
-                  download="anunciado_resume.pdf"
+                  href="/CV-Anunciado-March-2026.pdf"
+                  download="Anunciado-CV-2026.pdf"
                   className="flex items-center gap-2 text-sm font-semibold"
                 >
-                  <span className="">Resume:</span>
+                  <span className="">CV:</span>
 
                   <FaDownload className="text-lg" />
                 </a>
