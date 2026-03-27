@@ -15,3 +15,4 @@ npm run build
 npm run deploy
 
 -> web-darkmode branch test!
+-> technologies used on project!
