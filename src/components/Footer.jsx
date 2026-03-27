@@ -75,11 +75,11 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-gray-600">
               <li className="flex items-center gap-2">
                 <PhoneIcon className="h-5 w-5 text-gray-400" />
-                <span>+63 938 2313 715</span>
+                <span>+63 938 **** ***</span>
               </li>
               <li className="flex items-center gap-2">
                 <EnvelopeIcon className="h-5 w-5 text-gray-400" />
-                <span>jmarkanunciado@gmail.com</span>
+                <span>johnmark.anunciado.dev@gmail.com</span>
               </li>
             </ul>
           </div>

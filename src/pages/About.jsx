@@ -36,7 +36,9 @@ export default function About() {
               <div>
                 <label className="text-sm font-semibold">Email:</label>
                 <p className="hover:underline">
-                  <a href="mailto:jmarkanunciado@gmail.com">jmarkanunciado@gmail.com</a>
+                  <a href="mailto:johnmark.anunciado.dev@gmail.com">
+                    johnmark.anunciado.dev@gmail.com
+                  </a>
                 </p>
               </div>
               <div>
